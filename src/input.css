@@ -95,4 +95,38 @@
   .search-component.search-active button.clear {
     @apply flex;
   }
+
+  /* Reviews slider */
+  .splide.reviews .panel {
+    @apply absolute top-0 w-full h-full backdrop-blur-sm blur-[3px] hidden;
+    @variant sm {
+    }
+    @variant md {
+    }
+    @variant lg {
+      @apply block;
+      max-width: calc((105% - 960px) / 2);
+    }
+    @variant xl {
+      @apply block;
+      max-width: calc((105% - 1140px) / 2);
+    }
+    @variant 2xl {
+      @apply block;
+      max-width: calc((105% - 1240px) / 2);
+    }
+  }
+  .splide.reviews .left-panel {
+    @apply left-0;
+  }
+  .splide.reviews .right-panel {
+    @apply right-0;
+  }
+
+  .splide.reviews .splide__arrows {
+    @apply absolute -top-10 right-10 flex gap-2;
+  }
+  .splide.reviews .splide__arrows button {
+    @apply !static;
+  }
 }

@@ -50,7 +50,7 @@ document.addEventListener('DOMContentLoaded', function () {
   });
 
   // Partners carousel
-  new Splide('.splide', {
+  new Splide('.partners-splide', {
     type: 'loop',
     perPage: 5,
     perMove: 1,
@@ -58,5 +58,33 @@ document.addEventListener('DOMContentLoaded', function () {
     arrows: false,
     autoplay: true,
     interval: 5000,
+  }).mount();
+  // Reviews carousel
+  new Splide('.reviews', {
+    type: 'loop',
+    perPage: 5,
+    perMove: 1,
+    pagination: false,
+    arrows: true,
+    autoplay: true,
+    gap: 20,
+    interval: 500,
+    breakpoints: {
+      1600: {
+        perPage: 5,
+      },
+      1400: {
+        perPage: 4,
+      },
+      1200: {
+        perPage: 3,
+      },
+      1024: {
+        perPage: 2,
+      },
+      600: {
+        perPage: 1,
+      },
+    },
   }).mount();
 });
