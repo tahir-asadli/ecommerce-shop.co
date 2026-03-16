@@ -91,4 +91,9 @@
   .header-content-visible {
     @apply block opacity-100 top-10;
   }
+
+  /* Search component */
+  .search-component.search-active button.clear {
+    @apply flex;
+  }
 }

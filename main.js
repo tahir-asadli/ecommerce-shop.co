@@ -27,4 +27,25 @@ document.addEventListener('DOMContentLoaded', function () {
       }
     });
   });
+
+  // Search component
+  const searchComponents = document.querySelectorAll('.search-component');
+  searchComponents?.forEach((searchComponent) => {
+    if (searchComponent.querySelector('input')?.value.trim() !== '') {
+      searchComponent.classList.add('search-active');
+    } else {
+      searchComponent.classList.remove('search-active');
+    }
+    searchComponent.querySelector('input')?.addEventListener('keyup', function () {
+      if (this.value.trim() !== '') {
+        searchComponent.classList.add('search-active');
+      } else {
+        searchComponent.classList.remove('search-active');
+      }
+    });
+    searchComponent.querySelector('button.clear')?.addEventListener('click', function () {
+      searchComponent.querySelector('input').value = '';
+      searchComponent.classList.remove('search-active');
+    });
+  });
 });
