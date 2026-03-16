@@ -48,4 +48,15 @@ document.addEventListener('DOMContentLoaded', function () {
       searchComponent.classList.remove('search-active');
     });
   });
+
+  // Partners carousel
+  new Splide('.splide', {
+    type: 'loop',
+    perPage: 5,
+    perMove: 1,
+    pagination: false,
+    arrows: false,
+    autoplay: true,
+    interval: 5000,
+  }).mount();
 });
