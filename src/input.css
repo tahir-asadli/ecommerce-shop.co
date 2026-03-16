@@ -51,8 +51,7 @@
 
 @layer components {
   .button {
-    @apply inline-flex items-center justify-center px-8 py-4 text-white text-lg font-semibold transition-opacity hover:opacity-90;
-    background-color: var(--color-brand-primary);
+    @apply inline-flex items-center justify-center px-8 py-3 bg-black text-white text-lg rounded-full font-semibold transition-opacity hover:opacity-90;
   }
 }
 @layer utilities {
