@@ -59,6 +59,7 @@ document.addEventListener('DOMContentLoaded', function () {
     autoplay: true,
     interval: 5000,
   }).mount();
+
   // Reviews carousel
   new Splide('.reviews', {
     type: 'loop',
