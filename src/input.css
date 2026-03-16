@@ -1,6 +1,7 @@
 @import 'tailwindcss';
 @import './fonts/satoshi.css';
 @source '../*.html';
+@custom-variant hover (&:hover);
 
 @theme {
   --font-sans: 'Satoshi', system-ui, -apple-system, 'Segoe UI', sans-serif;
