@@ -68,7 +68,7 @@ document.addEventListener('DOMContentLoaded', function () {
     arrows: true,
     autoplay: true,
     gap: 20,
-    interval: 500,
+    interval: 5000,
     breakpoints: {
       1600: {
         perPage: 5,

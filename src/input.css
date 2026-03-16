@@ -98,7 +98,8 @@
 
   /* Reviews slider */
   .splide.reviews .panel {
-    @apply absolute top-0 w-full h-full backdrop-blur-sm blur-[3px] hidden;
+    @apply absolute top-0 w-full h-full hidden bg-white;
+    /*  backdrop-blur-sm blur-[3px] */
     @variant sm {
     }
     @variant md {
@@ -117,16 +118,18 @@
     }
   }
   .splide.reviews .left-panel {
+    background: linear-gradient(90deg, rgba(255, 255, 255, 1) 0%, rgba(255, 255, 255, 0) 100%);
     @apply left-0;
   }
   .splide.reviews .right-panel {
     @apply right-0;
+    background: linear-gradient(90deg, rgba(255, 255, 255, 0) 0%, rgba(255, 255, 255, 1) 100%);
   }
 
   .splide.reviews .splide__arrows {
     @apply absolute -top-10 right-10 flex gap-2;
   }
   .splide.reviews .splide__arrows button {
-    @apply !static;
+    @apply static! bg-transparent! opacity-100!;
   }
 }
