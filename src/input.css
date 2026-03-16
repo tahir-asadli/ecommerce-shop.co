@@ -86,4 +86,9 @@
   .scrollbar-hide::-webkit-scrollbar {
     display: none;
   }
+
+  /* Header */
+  .header-content-visible {
+    @apply block opacity-100 top-10;
+  }
 }
