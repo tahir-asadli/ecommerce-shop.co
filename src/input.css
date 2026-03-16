@@ -35,10 +35,20 @@
 
   h1 {
     font-family: var(--font-anton);
-    font-size: var(--text-6xl);
+    font-size: var(--text-4xl);
+    line-height: 1.1;
+    @variant lg {
+      font-size: var(--text-5xl);
+    }
+    @variant xl {
+      font-size: var(--text-6xl);
+    }
   }
   h2 {
-    font-size: var(--text-5xl);
+    font-size: var(--text-3xl);
+    @variant lg {
+      font-size: var(--text-5xl);
+    }
   }
   h3 {
     font-size: var(--text-4xl);

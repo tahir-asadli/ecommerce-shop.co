@@ -70,6 +70,23 @@ document.addEventListener('DOMContentLoaded', function () {
     arrows: false,
     autoplay: true,
     interval: 5000,
+    breakpoints: {
+      1600: {
+        perPage: 5,
+      },
+      1400: {
+        perPage: 4,
+      },
+      1200: {
+        perPage: 3,
+      },
+      1024: {
+        perPage: 2,
+      },
+      600: {
+        perPage: 1,
+      },
+    },
   }).mount();
 
   // Reviews carousel
