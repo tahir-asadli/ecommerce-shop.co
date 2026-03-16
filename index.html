@@ -150,8 +150,8 @@
         </ul>
       </div>
       <div class="flex-1 relative search-component">
-        <input type="text" placeholder="Search for products..." class="bg-gray-100 rounded-full px-4 py-2 h-12 w-full pl-12">
-        <svg class="absolute top-3.5 left-4 size-5 text-gray-400" viewBox="0 0 21 21" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <input type="text" placeholder="Search for products..." class="text-input pl-12">
+        <svg class="absolute top-3.5 left-4 size-5 text-black/40" viewBox="0 0 21 21" fill="none" xmlns="http://www.w3.org/2000/svg">
           <path d="M19.9399 18.348L15.4877 13.8939C16.8226 12.1544 17.4458 9.97216 17.2309 7.78998C17.0161 5.60781 15.9792 3.58907 14.3306 2.14328C12.6821 0.697486 10.5453 -0.0670986 8.35376 0.00462578C6.16221 0.0763502 4.07999 0.979013 2.5295 2.5295C0.979013 4.07999 0.0763502 6.16221 0.00462578 8.35376C-0.0670986 10.5453 0.697486 12.6821 2.14328 14.3306C3.58907 15.9792 5.60781 17.0161 7.78998 17.2309C9.97216 17.4458 12.1544 16.8226 13.8939 15.4877L18.3499 19.9445C18.4545 20.0492 18.5787 20.1322 18.7155 20.1888C18.8522 20.2455 18.9987 20.2746 19.1467 20.2746C19.2947 20.2746 19.4413 20.2455 19.578 20.1888C19.7147 20.1322 19.839 20.0492 19.9436 19.9445C20.0482 19.8399 20.1313 19.7157 20.1879 19.5789C20.2445 19.4422 20.2737 19.2957 20.2737 19.1477C20.2737 18.9997 20.2445 18.8531 20.1879 18.7164C20.1313 18.5797 20.0482 18.4554 19.9436 18.3508L19.9399 18.348ZM2.26891 8.64392C2.26891 7.38306 2.6428 6.15052 3.3433 5.10215C4.04379 4.05379 5.03943 3.23669 6.20431 2.75418C7.36919 2.27167 8.65099 2.14543 9.88762 2.39141C11.1242 2.63739 12.2602 3.24455 13.1517 4.13611C14.0433 5.02767 14.6504 6.16359 14.8964 7.40021C15.1424 8.63684 15.0162 9.91864 14.5336 11.0835C14.0511 12.2484 13.234 13.244 12.1857 13.9445C11.1373 14.645 9.90477 15.0189 8.64392 15.0189C6.95369 15.0172 5.3332 14.345 4.13803 13.1498C2.94286 11.9546 2.27065 10.3341 2.26891 8.64392Z" fill="currentColor" />
         </svg>
         <button class="clear hidden justify-center items-center size-5 absolute top-3.5 right-2 z-1 cursor-pointer">&times;</button>
@@ -547,8 +547,31 @@
       <div class="panel right-panel"></div>
     </div>
   </section>
+  <!-- Newsletter -->
+  <section class="z-1">
+    <div class="container relative">
+      <div class="grid grid-cols-2 gap-20 bg-black rounded-3xl py-11 px-16 text-white">
+        <div>
+          <h3 class="text-4xl font-anton">STAY UPTO DATE ABOUT OUR LATEST OFFERS</h3>
+        </div>
+        <div class="flex justify-end">
+          <form action="">
+            <div class="flex flex-col gap-3.5 relative w-88">
+              <div>
+                <input class="text-input pl-12 text-black" type="text" placeholder="Enter your email address">
+                <svg class="absolute top-3.5 left-4 size-5 text-black/40" viewBox="0 0 21 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <path d="M19.125 0H1.125C0.826631 0 0.540483 0.118526 0.329505 0.329505C0.118526 0.540483 0 0.826631 0 1.125V13.875C0 14.3723 0.197544 14.8492 0.549175 15.2008C0.900805 15.5525 1.37772 15.75 1.875 15.75H18.375C18.8723 15.75 19.3492 15.5525 19.7008 15.2008C20.0525 14.8492 20.25 14.3723 20.25 13.875V1.125C20.25 0.826631 20.1315 0.540483 19.9205 0.329505C19.7095 0.118526 19.4234 0 19.125 0ZM10.125 7.84875L4.01719 2.25H16.2328L10.125 7.84875ZM6.82406 7.875L2.25 12.0675V3.6825L6.82406 7.875ZM8.48906 9.40125L9.36469 10.2047C9.57219 10.395 9.84348 10.5005 10.125 10.5005C10.4065 10.5005 10.6778 10.395 10.8853 10.2047L11.7609 9.40125L16.2328 13.5H4.01719L8.48906 9.40125ZM13.4259 7.875L18 3.6825V12.0675L13.4259 7.875Z" fill="currentColor" />
+                </svg>
+              </div>
+              <button class="button bg-white text-black">Subscribe to Newsletter</button>
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
+  </section>
   <!-- Footer -->
-  <footer class="bg-gray-100 pt-20">
+  <footer class="bg-gray-100 pt-40 -mt-20">
     <div class="container">
       <div class="grid grid-cols-22 gap-10 pb-14 border-b border-b-black/10">
         <div class="col-span-6">
