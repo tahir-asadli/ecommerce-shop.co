@@ -28,6 +28,11 @@
     color: var(--color-text);
   }
 
+  html.mobile-menu-open,
+  html.mobile-menu-open body {
+    @apply overflow-hidden h-full;
+  }
+
   h1 {
     font-family: var(--font-anton);
     font-size: var(--text-6xl);
@@ -59,6 +64,7 @@
 }
 @layer utilities {
   .container {
+    @apply transition-all;
     /* Apply default horizontal margin for centering */
     margin-inline: auto;
     /* Apply default horizontal padding */

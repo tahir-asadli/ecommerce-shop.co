@@ -4,6 +4,18 @@ document.addEventListener('DOMContentLoaded', function () {
 
   closeButton?.addEventListener('click', function () {
     announcement && (announcement.style.display = 'none');
+
+    document.querySelector('body').classList.remove('has-announcement');
+  });
+
+  const mobileMenuButton = document.getElementById('mobile-menu-button');
+  const mobileMenuOverlay = document.getElementById('mobile-menu-overlay');
+
+  mobileMenuButton?.addEventListener('click', () => {
+    document.querySelector('html').classList.toggle('mobile-menu-open');
+  });
+  mobileMenuOverlay?.addEventListener('click', () => {
+    document.querySelector('html').classList.remove('mobile-menu-open');
   });
 
   const headerLinks = document.querySelectorAll('.header-link');
