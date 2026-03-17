@@ -61,60 +61,123 @@ document.addEventListener('DOMContentLoaded', function () {
     });
   });
 
+  // Quantity component
+  const quantityComponents = document.querySelectorAll('.quantity-component');
+  quantityComponents?.forEach((component) => {
+    const input = component.querySelector('input[type="number"]');
+    const incrementButton = component.querySelector('button:nth-child(3)');
+    const decrementButton = component.querySelector('button:nth-child(1)');
+
+    incrementButton?.addEventListener('click', () => {
+      input.value = parseInt(input.value) + 1;
+      input.dispatchEvent(new Event('change'));
+    });
+
+    decrementButton?.addEventListener('click', () => {
+      if (parseInt(input.value) > 1) {
+        input.value = parseInt(input.value) - 1;
+        input.dispatchEvent(new Event('change'));
+      }
+    });
+  });
+
+  // Product image gallery
+  //   product-gallery
+  // product-thumbnails
+  // // product-gallery-main-image
+  document.querySelectorAll('.product-gallery').forEach((gallery) => {
+    const mainImage = gallery.querySelector('.product-gallery-main-image');
+    const thumbnails = gallery.querySelectorAll('.product-thumbnails img');
+
+    thumbnails.forEach((thumbnail) => {
+      thumbnail.addEventListener('click', function () {
+        const newSrc = this.getAttribute('data-large-src');
+        if (newSrc) {
+          mainImage.src = newSrc;
+          thumbnails.forEach((thumb) => {
+            thumb.parentElement.classList.remove('active');
+          });
+          this.parentElement.classList.add('active');
+        }
+      });
+    });
+  });
+  // Tab functionality
+  document.querySelectorAll('.tab-button').forEach((button) => {
+    button.addEventListener('click', function () {
+      const tabName = this.getAttribute('data-tab');
+
+      document.querySelectorAll('.tab-content').forEach((content) => {
+        content.classList.add('hidden');
+      });
+
+      document.getElementById(tabName + '-content').classList.remove('hidden');
+
+      document.querySelectorAll('.tab-button').forEach((btn) => {
+        btn.classList.remove('text-black', 'font-semibold', 'border-b-black');
+        btn.classList.add('text-gray-600', 'border-b-transparent');
+      });
+
+      this.classList.remove('text-gray-600', 'border-b-transparent');
+      this.classList.add('text-black', 'font-semibold', 'border-b-black');
+    });
+  });
   // Partners carousel
-  new Splide('.partners-splide', {
-    type: 'loop',
-    perPage: 5,
-    perMove: 1,
-    pagination: false,
-    arrows: false,
-    autoplay: true,
-    interval: 5000,
-    breakpoints: {
-      1600: {
-        perPage: 5,
+  document.querySelector('.partners-splide') &&
+    new Splide('.partners-splide', {
+      type: 'loop',
+      perPage: 5,
+      perMove: 1,
+      pagination: false,
+      arrows: false,
+      autoplay: true,
+      interval: 5000,
+      breakpoints: {
+        1600: {
+          perPage: 5,
+        },
+        1400: {
+          perPage: 4,
+        },
+        1200: {
+          perPage: 3,
+        },
+        1024: {
+          perPage: 2,
+        },
+        600: {
+          perPage: 1,
+        },
       },
-      1400: {
-        perPage: 4,
-      },
-      1200: {
-        perPage: 3,
-      },
-      1024: {
-        perPage: 2,
-      },
-      600: {
-        perPage: 1,
-      },
-    },
-  }).mount();
+    }).mount();
 
   // Reviews carousel
-  new Splide('.reviews', {
-    type: 'loop',
-    perPage: 5,
-    perMove: 1,
-    pagination: false,
-    arrows: true,
-    autoplay: true,
-    gap: 20,
-    interval: 5000,
-    breakpoints: {
-      1600: {
-        perPage: 5,
+  document.querySelector('.reviews') &&
+    new Splide('.reviews', {
+      type: 'loop',
+      perPage: 5,
+      perMove: 1,
+      pagination: false,
+      arrows: true,
+      autoplay: true,
+      gap: 20,
+      interval: 5000,
+      breakpoints: {
+        1600: {
+          perPage: 5,
+        },
+        1400: {
+          perPage: 4,
+        },
+        1200: {
+          perPage: 3,
+        },
+        1024: {
+          perPage: 2,
+        },
+        600: {
+          perPage: 1,
+        },
       },
-      1400: {
-        perPage: 4,
-      },
-      1200: {
-        perPage: 3,
-      },
-      1024: {
-        perPage: 2,
-      },
-      600: {
-        perPage: 1,
-      },
-    },
-  }).mount();
+    }).mount();
 });
