@@ -199,7 +199,7 @@
 
   /* Header */
   .header-content-visible {
-    @apply block opacity-100 top-10;
+    @apply block opacity-100 top-20;
   }
 
   /* Search component */

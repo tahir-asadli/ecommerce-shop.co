@@ -8,6 +8,7 @@ document.addEventListener('DOMContentLoaded', function () {
     document.querySelector('body').classList.remove('has-announcement');
   });
 
+  // Mobile menu
   const mobileMenuButton = document.getElementById('mobile-menu-button');
   const mobileMenuOverlay = document.getElementById('mobile-menu-overlay');
 
@@ -16,6 +17,17 @@ document.addEventListener('DOMContentLoaded', function () {
   });
   mobileMenuOverlay?.addEventListener('click', () => {
     document.querySelector('html').classList.remove('mobile-menu-open');
+  });
+
+  // Search menu
+  const searchMenuButton = document.getElementById('search-menu-button');
+  const searchMenuOverlay = document.getElementById('search-menu-overlay');
+
+  searchMenuButton?.addEventListener('click', () => {
+    document.querySelector('html').classList.toggle('search-menu-open');
+  });
+  searchMenuOverlay?.addEventListener('click', () => {
+    document.querySelector('html').classList.remove('search-menu-open');
   });
 
   const headerLinks = document.querySelectorAll('.header-link');
