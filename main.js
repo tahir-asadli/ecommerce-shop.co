@@ -81,10 +81,6 @@ document.addEventListener('DOMContentLoaded', function () {
     });
   });
 
-  // Product image gallery
-  //   product-gallery
-  // product-thumbnails
-  // // product-gallery-main-image
   document.querySelectorAll('.product-gallery').forEach((gallery) => {
     const mainImage = gallery.querySelector('.product-gallery-main-image');
     const thumbnails = gallery.querySelectorAll('.product-thumbnails img');
@@ -102,6 +98,31 @@ document.addEventListener('DOMContentLoaded', function () {
       });
     });
   });
+
+  document.querySelectorAll('.filter-accordion').forEach((accordion) => {
+    const header = accordion.querySelector('h6');
+    const content = header.nextElementSibling;
+
+    header.addEventListener('click', () => {
+      if (accordion.classList.contains('accordion-open')) {
+        content.style.height = '0';
+        accordion.classList.remove('accordion-open');
+      } else {
+        const contentHeight = content.scrollHeight;
+        content.style.height = contentHeight + 'px';
+        accordion.classList.add('accordion-open');
+      }
+    });
+  });
+
+  // Slider value display
+  document.querySelectorAll('.slider').forEach((slider) => {
+    const valueDisplay = slider.nextElementSibling;
+    slider.addEventListener('input', function () {
+      valueDisplay.textContent = this.value;
+    });
+  });
+
   // Tab functionality
   document.querySelectorAll('.tab-button').forEach((button) => {
     button.addEventListener('click', function () {
