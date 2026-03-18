@@ -119,6 +119,12 @@
     -moz-appearance: textfield;
     appearance: textfield;
   }
+  .quantity-component.small {
+    @apply h-11;
+  }
+  .quantity-component.small button {
+    @apply px-3 text-2xl;
+  }
 
   .slider {
     -webkit-appearance: none;
